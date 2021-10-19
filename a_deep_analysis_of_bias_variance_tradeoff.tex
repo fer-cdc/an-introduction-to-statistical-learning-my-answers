@@ -1,0 +1,42 @@
+\documentclass[aps,12pt,nofootinbib,prd]{revtex4-2}
+%
+%\renewcommand{\baselinestretch}{1.2}
+%
+%\documentstyle[epsfig,12pt]{article}
+%
+\usepackage{amsmath}
+%\usepackage{eulervm}
+\usepackage{graphicx}
+%\usepackage[sc]{mathpazo}
+%\usepackage{mathpazo}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{slashed}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\begin{document}
+\pagestyle{empty}
+\centerline{{\Large \bf \underline{The Bias-Variance trade-off}}}
+\vspace{.5cm}
+\noindent
+{\it I explain why the bias-variance trade-off happens based on the expected test MSE.}\\[0.3cm]
+\noindent
+ The expected test MSE that we would obtain if we repeatedly estimated $f$ using a large number of training sets, and tested each at $x_0$, is given by
+ \begin{equation}\label{bv_tradeoff}
+  {\rm E}\left[\left(\hat{f}\left(x_0\right) - y_0 \right)^2\right] = {\rm Var}\left(\hat{f}\left(x_0\right)\right) + \left({\rm E}\left(\hat{f}\left(x_0\right)\right) - y_0\right)^2 + {\rm Var}\left(\epsilon\right),
+ \end{equation}
+where the second term of the L.H.S. of the Eq.(\ref{bv_tradeoff}) is called {\it bias} of the estimator $\hat{f}$.
+
+\noindent
+As we said, the expectation here is taken in relation to the possible training sets, i.e. the training sets available are taken as a sample. Therefore the expectation is not taken in relation to $X$ as it seems to be by the notation.
+
+\noindent
+We often hear hear that there is a trade-off between bias and variance of $\hat{f}$, but where does it come from? At a first glance, it seems that a greater variance implies a greater bias as the error $\left(\hat{f}\left(x_0\right) - y_0\right)$ can be greater. But that is the point, the error {\it can} be greater but can also be smaller. And for a highly non-linear response $y$ an inflexible method leads, in general, to greater errors $\left(\hat{f}\left(x_0\right) - y_0\right)$ than an flexible method leads. Of course, if the response is linear, a inflexible method such as a linear regression will have a smaller bias and, as in general, a smaller variance than flexible methods. But this is an exception, and in general we have this trade-off.\\[0.3cm]
+{\it Why are we more interested in the expected test MSE than in bias?}\\[0.3cm] 
+The expected test MSE help us better in the decision of what statistical method should we choose in order to predict/describe a certain problem because the bias does not take into account the effects of the variance of $\hat{f}$ but only its average at $x_0$. If a method estimates some $\hat{f}$ whose error $\left(\hat{f}\left(x_0\right) - y_0\right)$ is huge, this will be taken into account by ${\rm E}\left[\left(\hat{f}\left(x_0\right) - y_0 \right)^2\right]$, by its own definition, but it will not be taken into account by the bias 
+$\left({\rm E}\left(\hat{f}\left(x_0\right)\right) - y_0\right)^2$ as only the average value 
+${\rm E}\left(\hat{f}\left(x_0\right)\right)$ matters.
+\end{document}
