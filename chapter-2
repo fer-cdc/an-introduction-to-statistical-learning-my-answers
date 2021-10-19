@@ -1,0 +1,6 @@
+2.(a) Better - A large number of training data reduces our chances of commiting
+an overffiting when using a flexible method. A less flexible method would have a
+ high bias so the trade-off would be in favor of the flexible method.
+ (Page 36 of the book also have some support to this answer.)
+
+ (b) Worse -
