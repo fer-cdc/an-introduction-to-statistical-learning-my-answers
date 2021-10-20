@@ -1,6 +1,35 @@
-2.(a) Better - A large number of training data reduces our chances of commiting
+1.(a) Better - A large number of training data reduces our chances of commiting
 an overffiting when using a flexible method. A less flexible method would have a
- high bias so the trade-off would be in favor of the flexible method.
- (Page 36 of the book also have some support to this answer.)
+high bias so the trade-off would be in favor of the flexible method.
+(Page 36 of the book also have some support to this answer.)
 
- (b) Worse -
+1.(b) Worse - When the number of observations is small we can easily incur in an
+ overffiting.
+
+1.(c) Better - A highly non-linear respose requires flexible methods, otherwise
+ the bias can be huge.
+
+1.(d) Worse - A flexible method will learn the variance of the error terms,
+commiting an overffiting.
+
+
+
+2.(a) Regression; inference ("We are interested in UNDERSTANDING which factors
+affect CEO salary"). n = 500, p = 3.
+
+2.(b) Classification; prediction. n = 20, p = 13.
+
+2.(c) Regression; prediction. n = 52, p = 3.
+
+
+3.(a) see 3(a).png
+
+3.(b) For an explanation for bias, variance and test error curves, see
+a_deep_analysis_of_bias_variance_tradeoff.pdf.
+
+Training error - It declines as flexibility increases as the method becomes
+more and more able to fit all the training data. There is no overffiting problem
+here since it manifests only in test data.
+
+Bayes (irreducible) error rate - If the classes overlap the population of data
+then it certainly will be an error. This is caused by random errors.
