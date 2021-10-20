@@ -22,6 +22,7 @@ affect CEO salary"). n = 500, p = 3.
 2.(c) Regression; prediction. n = 52, p = 3.
 
 
+
 3.(a) see 3(a).png
 
 3.(b) For an explanation for bias, variance and test error curves, see
@@ -33,6 +34,7 @@ here since it manifests only in test data.
 
 Bayes (irreducible) error rate - If the classes overlap the population of data
 then it certainly will be an error. This is caused by random errors.
+
 
 
 4.(a) i - College admission. Response: {accepted, denied}. Predictors:
@@ -61,3 +63,25 @@ per capita, Gini coefficient.
 
  iii - Marketing survey. Clustering the population of a city in order to see
  who are your consumers and who are the potential consumers of your new product.
+
+
+
+5. See a_deep_analysis_of_bias_variance_tradeoff.pdf.
+
+
+
+7.(a)    Obs. | Euclidean distance
+          -----|-------------------
+          1    |       3
+          2    |       2
+          3    |       sqrt(10)
+          4    |       sqrt(5)
+          5    |       sqrt(2)
+          6    |       sqrt(3)
+
+7.(b) When K = 1, the closest observation is the number 5. Prediction = green.
+
+7.(c) When K = 3, the three closest observations are number 5, 6 and 2.
+P(red) = 2/3 and P(green) = 1/3, so prediction = red.
+
+7.(d) Small Ks are preferable as they lead to a more flexible predictors.
