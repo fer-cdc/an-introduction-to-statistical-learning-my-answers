@@ -33,3 +33,31 @@ here since it manifests only in test data.
 
 Bayes (irreducible) error rate - If the classes overlap the population of data
 then it certainly will be an error. This is caused by random errors.
+
+
+4.(a) i - College admission. Response: {accepted, denied}. Predictors:
+SAT score and IB final grades. Inference.
+ii - Chip test. Response: {working, not working}. Predictors: length, width
+and thickness. Prediction.
+iii - Type of breast cancer. Response: {benign, malignant}. Predictor: cancer
+volume. Prediction.
+
+(b) i - Gasoline price in Brazil. Response: price in R$ (brazilian Real).
+Predictors: monthly brazilian inflation rate, season(summer, fall, winter,
+spring) and monthly USA inflation rate. Inference.
+
+ii - Price of a house. Response: price. Predictors: area, number of bedrooms,
+number of bathrooms, location, general condition of the house, zoning
+classification. Inference.
+
+iii - Infant mortality rate. Response: infant mortality rate. Predictors: GDP
+per capita, Gini coefficient.
+
+(c) i - Spam filter. Classifies an email as spam or not-spam according to words,
+ phrases and sentences.
+
+ ii - Netflix recommendations. Recomend products based on users who have
+ similar tastes.
+
+ iii - Marketing survey. Clustering the population of a city in order to see
+ who are your consumers and who are the potential consumers of your new product.
