@@ -27,10 +27,35 @@ Elite[Top10perc > 50] = "Yes"         # Now the rows associated to Top10perc > 5
 
 Elite = as.factor(Elite)
 
-#> par(mfrow=c(2,2))
-#> hist(Apps, breaks = seq(min(Apps),max(Apps), length.out = 21))
-#> ratio_accept = Accept/Apps
-#> plot(ratio_accept, Top10perc)
-#> plot(ratio_accept, Top10perc)
-#> plot(Top10perc, Grad.Rate)
-#> college[Grad.Rate>100]
+# v
+par(mfrow=c(2,2))
+
+ratio_accept = Accept/Apps
+# Defining ratio_accept: it measures, relatively, how difficult is to be accepted at a certain college.
+
+hist(ratio_accept, breaks = seq(min(ratio_accept), max(ratio_accept), length.out = 21))  # This is the way to produce 21 bins
+# Students are doing fine when it comes to be accepted.
+
+hist(Grad.Rate, breaks = seq(min(Grad.Rate), max(Grad.Rate), length.out = 21)) 
+# But not so fine when it comes to get graduated.
+
+hist(Top10perc, breaks = seq(min(Top10perc), max(Top10perc), length.out = 21))
+
+hist(Top25perc, breaks = seq(min(Top25perc), max(Top25perc), length.out = 21))
+# There is a hope for students that are not in the top 25% of high school class. 
+
+
+# vi
+plot(ratio_accept, Top10perc, ylim=c(0,100))
+# There is an inverse relationship between them. It seems that a parabola would fit very well. 
+# The more the top students aplly, the more difficult is to be accepted.
+
+plot(Top10perc, Grad.Rate)
+# It seems also that the graduation rate and the ratio of top 10 students in a college have a log relationship. 
+# From the 60th percentile on, the relationship doesn't change.
+
+# Now let us find out which are the wrong data that we talked about in (c) i.
+wrong_grad.rate = college[Grad.Rate > 100,]
+# Cazenovia College.
+wrong_phd.ration = college[PhD > 100,]
+# Texas A&M University at Galveston.
