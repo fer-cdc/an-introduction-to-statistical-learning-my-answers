@@ -1,6 +1,5 @@
 # 9
-Auto = read.table("/home/fernando/github/an-introduction-to-statistical-learning-my-answers/chapter_2/Auto.data", 
-                  header = TRUE, stringsAsFactors = TRUE, na.strings = "?")        ##########NÃO SE ESQUECER DE TIRAR ESSE CAMINHO DEPOIS
+Auto = read.table("Auto.data", header = TRUE, stringsAsFactors = TRUE, na.strings = "?")
 Auto = na.omit(Auto)                  # Removes the rows that contain NA"
 View(Auto)
 attach(Auto)
