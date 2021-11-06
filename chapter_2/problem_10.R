@@ -58,5 +58,5 @@ dim(Boston[chas == 1, ])[1]     # 35 suburbs
 median(ptratio)     # 19.05
 
 # (g)
-min_dev = t(Boston[medv == min(medv), ])
+min_mdev = Boston[medv == min(medv), ]
 
