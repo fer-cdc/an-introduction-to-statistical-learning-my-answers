@@ -107,4 +107,27 @@ analysis_406 = t(rbind(min_mdev[2, ], comparison_406))
 #medv    "5"       "at min" 
 
 # (h)
+nrow(Boston[rm > 7, ])
+# 64 census tract have an average greater than seven rooms per dwelling
+
+more_than_eight = Boston[rm > 8, ]
+nrow(more_than_eight)   # 13 census tract have an average greater than seven rooms per dwelling
+# To comment on these census tract, I'm going to compare their average values (using function colMeans()) to the Boston dataset
+# using, again, the analysis.R function.
+
+comparison_more_than_eight = comparison(colMeans(more_than_eight), Boston)
+analysis_more_than_eight = t(rbind(colMeans(more_than_eight), comparison_more_than_eight))
+#crim    "0.718795384615385" "between 1st and 3rd quartile"
+#zn      "13.6153846153846"  "above 3rd quartile"          
+#indus   "7.07846153846154"  "between 1st and 3rd quartile"
+#chas    "0.153846153846154" "above 3rd quartile"          
+#nox     "0.539238461538462" "between 1st and 3rd quartile"
+#rm      "8.34853846153846"  "above 3rd quartile"          
+#age     "71.5384615384615"  "between 1st and 3rd quartile"
+#dis     "3.43019230769231"  "between 1st and 3rd quartile"
+#rad     "7.46153846153846"  "between 1st and 3rd quartile"
+#tax     "325.076923076923"  "between 1st and 3rd quartile"
+#ptratio "16.3615384615385"  "below 1st quartile"          
+#lstat   "4.31"              "below 1st quartile"          
+#medv    "44.2"              "above 3rd quartile"  
 
